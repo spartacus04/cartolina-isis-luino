@@ -49,7 +49,10 @@
         updateBannerVisibility();
       }
 
-      var buildUrl = "Build";
+      // if browser locale is italian lang=IT, otherwise lang=EN
+      var lang = navigator.language == 'it' ? 'IT' : 'EN';
+
+      var buildUrl = "Build" + lang;
       var loaderUrl = buildUrl + "/Build.loader.js";
       var config = {
         dataUrl: buildUrl + "/Build.data",
