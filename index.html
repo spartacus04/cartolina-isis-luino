@@ -50,7 +50,8 @@
       }
 
       // if browser locale is italian lang=IT, otherwise lang=EN
-      var lang = navigator.language == 'it' ? 'IT' : 'EN';
+      console.log(navigator.language);
+      var lang = navigator.language.startsWith('it') ? 'IT' : 'EN';
 
       var buildUrl = "Build" + lang;
       var loaderUrl = buildUrl + "/Build.loader.js";
